@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./components/ThemeToggle";
+import { ThemeToggle } from "../components/ThemeToggle";
+import HeroSection from "@/components/containers/landing/HeroSection";
 
-export default function Home() {
+export default async function LandingPage() {
   return (
-    <></>
+    <HeroSection/>
   );
 }
