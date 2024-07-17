@@ -8,7 +8,7 @@ import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 export async function Navbar() {
     const {isAuthenticated} = getKindeServerSession();
     return(
-        <nav className="border-b bg-background h-[10vh] flex items-center">
+        <nav className="border-b backdrop-blur-xl bg-background/30 h-[9vh] flex items-center">
             <div className="container flex items-center justify-between">
                 <Link href="/">
                     <h1 className="font-bold text-3xl">Craftolia</h1>
