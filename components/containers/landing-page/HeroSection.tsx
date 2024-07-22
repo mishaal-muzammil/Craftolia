@@ -13,7 +13,7 @@ export default async function Hero() {
   const { isAuthenticated } = getKindeServerSession();
   return (
     <section>
-    <BackgroundGradientAnimation className="pt-40 h-20" size="25%" interactive firstColor="hsl(var(--primary))" secondColor="hsl(var(--muted))" thirdColor="hsl(var(--secondary))" gradientBackgroundStart="hsl(var(--muted))" gradientBackgroundEnd="hsl(var(--background))" pointerColor="var(--destructive)">
+    <BackgroundGradientAnimation className="pt-40 h-20" size="25%" interactive firstColor="hsl(var(--primary))" secondColor="#82D4FC" thirdColor="#3114B3" gradientBackgroundStart="hsl(var(--background))" gradientBackgroundEnd="hsl(var(--secondary))" pointerColor="var(--destructive)">
 
       <div className="z-50 relative max-w-3xl mx-auto text-center flex flex-col items-center justify-center gap-3 py-4 lg:py-12">
 
