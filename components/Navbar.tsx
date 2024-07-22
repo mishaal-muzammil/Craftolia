@@ -8,10 +8,10 @@ import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 export async function Navbar() {
     const {isAuthenticated} = getKindeServerSession();
     return(
-        <nav className="border-b backdrop-blur-xl bg-background/30 h-[9vh] flex items-center">
+        <nav className="backdrop-blur-xl bg-transparent h-[9vh] flex items-center">
             <div className="container flex items-center justify-between">
                 <Link href="/">
-                    <h1 className="font-bold text-3xl">Craftolia</h1>
+                    <h1 className="font-bold text-primary text-3xl">Craftolia</h1>
                 </Link>
 
                 <div className="flex items-center gap-x-3">
@@ -28,8 +28,8 @@ export async function Navbar() {
                             </div>
                         ) : (
                             <div className="flex items-center gap-x-3">                       
-                                <RegisterLink><Button variant="secondary">Sign Up</Button></RegisterLink>
-                                <LoginLink><Button>Sign In</Button></LoginLink>
+                                <LoginLink><Button variant={"secondary"}>Sign In</Button></LoginLink>
+                                <RegisterLink><Button>Get Started</Button></RegisterLink>
                             </div>
 
                         )}
