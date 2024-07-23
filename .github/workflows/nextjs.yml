@@ -38,6 +38,7 @@ jobs:
           echo KINDE_POST_LOGOUT_REDIRECT_URL=${{ vars.KINDE_POST_LOGOUT_REDIRECT_URL }} >> .env
           echo KINDE_POST_LOGIN_REDIRECT_URL=${{ vars.KINDE_POST_LOGIN_REDIRECT_URL }} >> .env 
           echo KINDE_CLIENT_SECRET=${{ secrets.KINDE_CLIENT_SECRET }} >> .env 
+          cat .env
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
