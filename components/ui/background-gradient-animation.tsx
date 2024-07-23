@@ -15,7 +15,7 @@ export const BackgroundGradientAnimation = ({
   blendingValue = "hard-light",
   children,
   className,
-  interactive = true,
+  interactive = false,
   containerClassName,
 }: {
   gradientBackgroundStart?: string;
@@ -89,7 +89,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "-z-20 h-screen w-screen absolute overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "z-0 h-screen w-screen absolute overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
+import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
+
 import "./globals.css";
 
 
@@ -17,6 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const {isAuthenticated} = getKindeServerSession();
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -26,7 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar/>
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

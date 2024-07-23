@@ -25,8 +25,9 @@
     --destructive-foreground: 210 40% 98%;
     --ring: 217.22 91.22% 59.8%;
     --radius: 0.5rem;
+    --deep-secondary: 210, 6%, 93%;
   }
-
+  
   .dark {
     --background: 222.2 0% 0%;
     --foreground: 210 40% 98%;
@@ -47,6 +48,7 @@
     --destructive: 0 69.52% 52.05%;
     --destructive-foreground: 210 40% 98%;
     --ring: 217.22 39.02% 44.82%;
+    --deep-secondary: 240, 4%, 9%;
   }
 }
 
@@ -61,15 +63,67 @@
 }
 
 
-.shadow-backdrop {
+
+
+
+
+.backdrop-shadow {
   position: absolute;
-  background: hsl(var(--primary) / 20%);
+  background: hsl(var(--primary) / 0%);
   border-radius: 24px;
   rotate: 35deg;
 
   width: 260px;
   top: 200px;
-  height: 800px;
+  height: 400px;
   filter: blur(150px);
   animation: shadow-slide infinite 4s linear alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: hsl(var(--primary) / 20%);
+    right: 460px;
+  }
+  to {
+    background: hsl(var(--primary) / 80%);
+    right: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .backdrop-shadow {
+    top: 70px;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 460px;
+    }
+    to {
+      background: hsl(var(--primary) / 50%);
+      right: 160px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .backdrop-shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 280px;
+    }
+    to {
+      background: hsl(var(--primary) / 30%);
+      right: 100px;
+    }
+  }
 }
