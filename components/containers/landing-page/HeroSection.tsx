@@ -2,7 +2,6 @@
 
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import ShineBorder from "@/components/magicui/shine-border";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
 
 import {useKindeBrowserClient, LoginLink} from "@kinde-oss/kinde-auth-nextjs";
